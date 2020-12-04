@@ -8,7 +8,7 @@ services:
         published: 5000
         protocol: tcp
     deploy:
-      replicas: 1  
+      replicas: 3  
   service-two:
     image: kholeone/service-two:latest      
     build: ./service-two
@@ -16,7 +16,7 @@ services:
       - target: 5001
         protocol: tcp
     deploy:
-      replicas: 1 
+      replicas: 3 
   service-three:
     image: kholeone/service-three:latest
     build: ./service-three
@@ -24,7 +24,7 @@ services:
       - target: 5002
         protocol: tcp
     deploy:
-      replicas: 1  
+      replicas: 3 
   service-four:
     image: kholeone/service-four:latest      
     build: ./service-four
@@ -32,4 +32,4 @@ services:
       - target: 5003
         protocol: tcp
     deploy:
-      replicas: 1
+      replicas: 3 
