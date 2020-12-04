@@ -1,0 +1,17 @@
+- name: load docker swarm
+  docker_swarm:
+    state: present
+
+- name: inspect Swarm
+  docker_swarm:
+    state: inspect
+  register: swarm_info
+
+- name: inspect swarm nodes
+  docker_swarm_info:
+    nodes: yes
+
+- name: retrieve join token
+  add_host:
+    name: "join_token"
+    value: "{{ swarm_info.swarm_facts.JoinTokens.Worker }}"
