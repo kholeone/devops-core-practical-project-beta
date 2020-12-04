@@ -1,0 +1,35 @@
+version: '3.7'
+services:
+  sevice-one:
+    image: kholeone/service-one:latest
+    build: ./service-one
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    deploy:
+      replicas: 3  
+  service-two:
+    image: kholeone/service-two:latest      
+    build: ./service-two
+    ports:
+      - target: 5001
+        protocol: tcp
+    deploy:
+      replicas: 3 
+  service-three:
+    image: kholeone/service-three:latest
+    build: ./service-three
+    ports:
+      - target: 5002
+        protocol: tcp
+    deploy:
+      replicas: 3 
+  service-four:
+    image: kholeone/service-four:latest      
+    build: ./service-four
+    ports:
+      - target: 5003
+        protocol: tcp
+    deploy:
+      replicas: 3 
