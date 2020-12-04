@@ -11,7 +11,7 @@ class TestBase(TestCase):
 class TestPrice(TestBase):
       def test_af1_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Nike Air Force 1',
         
         )
@@ -19,7 +19,7 @@ class TestPrice(TestBase):
 
       def test_d_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Nike Dunk',
         
         )
@@ -27,7 +27,7 @@ class TestPrice(TestBase):
 
       def test_am1_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Nike Air Max 1',
         
         )
@@ -35,7 +35,7 @@ class TestPrice(TestBase):
 
       def test_aj1_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Nike Air Jordan 1',
         
         )
@@ -43,7 +43,7 @@ class TestPrice(TestBase):
 
       def test_as_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Adidas SuperStar',
         
         )
@@ -51,7 +51,7 @@ class TestPrice(TestBase):
 
       def test_aub_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Adidas Ultraboost',
         
         )
@@ -59,7 +59,7 @@ class TestPrice(TestBase):
 
       def test_ag_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Adidas Gazelle',
         
         )
@@ -67,7 +67,7 @@ class TestPrice(TestBase):
 
       def test_ay_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Adidas Yeezy',
         
         )
@@ -75,7 +75,7 @@ class TestPrice(TestBase):
 
       def test_agl3_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Asics Gel Lyte-III',
         
         )
@@ -83,7 +83,7 @@ class TestPrice(TestBase):
     
       def test_agl5_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Asics Gel Lyte-V',
         
         )
@@ -91,7 +91,7 @@ class TestPrice(TestBase):
 
       def test_aot_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Asics Onitsuka Tiger',
         
         )
@@ -99,7 +99,7 @@ class TestPrice(TestBase):
 
       def test_agk5_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='Asics Gel-Kayano 5',
         
         )
@@ -107,7 +107,7 @@ class TestPrice(TestBase):
 
       def test_nb577_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='New Balance 577',
         
         )
@@ -115,7 +115,7 @@ class TestPrice(TestBase):
 
       def test_nb998_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='New Balance 998',
         
         )
@@ -123,7 +123,7 @@ class TestPrice(TestBase):
 
       def test_nb827_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='New Balance 827',
         
         )
@@ -131,7 +131,7 @@ class TestPrice(TestBase):
 
       def test_nb327_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='New Balance 327',
         
         )
@@ -139,7 +139,7 @@ class TestPrice(TestBase):
 
       def test_nonexistent_price(self):
         response =self.client.post(
-            url_for('shoe_price'),
+            url_for('information'),
             data='',
         
         )
