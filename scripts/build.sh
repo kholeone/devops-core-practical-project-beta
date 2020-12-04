@@ -2,4 +2,4 @@
 sudo docker login
 sudo docker-compose stop --rmi all
 sudo docker-compose build
-docker-compose push
+sudo docker-compose push
