@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   sevice-one:
-    image: khole/service-one:latest
+    image: kholeone/service-one:latest
     build: ./service-one
     ports:
       - target: 5000
@@ -10,7 +10,7 @@ services:
     deploy:
       replicas: 1  
   service-two:
-    image: khole/service-two:latest      
+    image: kholeone/service-two:latest      
     build: ./service-two
     ports:
       - target: 5001
@@ -18,7 +18,7 @@ services:
     deploy:
       replicas: 1 
   service-three:
-    image: khole/service-three:latest
+    image: kholeone/service-three:latest
     build: ./service-three
     ports:
       - target: 5002
@@ -26,7 +26,7 @@ services:
     deploy:
       replicas: 1  
   service-four:
-    image: khole/service-four:latest      
+    image: kholeone/service-four:latest      
     build: ./service-four
     ports:
       - target: 5003
