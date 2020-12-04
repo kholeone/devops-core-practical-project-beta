@@ -1,6 +1,5 @@
 #! /bin/bash
 
-
 cd ./service-one
 python3 -m pytest --cov application
 cd ..
