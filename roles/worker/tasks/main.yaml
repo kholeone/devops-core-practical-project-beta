@@ -3,16 +3,9 @@
     state: absent
     force: true
 
-- name: swarm worker-two join
+- name: swarm worker join
   docker_swarm:
     state: join
-    advertise_addr: vm-worker-one
+    advertise_addr: worker
     join_token: "{{ hostvars['join_token']['value'] }}"
-    remote_addrs: [ "vm-manager:2377" ] 
-
-- name: swarm worker-one join
-  docker_swarm:
-    state: join
-    advertise_addr: vm-worker-two
-    join_token: "{{ hostvars['join_token']['value'] }}"
-    remote_addrs: [ "vm-wmanager:2377" ] 
+    remote_addrs: [ "manager:2377" ] 
