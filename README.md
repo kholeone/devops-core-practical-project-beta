@@ -1,6 +1,12 @@
+
+# Practical Project  👞👟🥾🥿👠👡🩰
+
+## Resources 
+- Application: http://35.197.234.35:5000/ 
+- Board: https://trello.com/b/5CriV5R7/snkrs-app  
+
 ### Brief
 To create an application that generates “Objects” upon a set of predefined rules, by creating a service-orientated architecture for an application. It is to be composed of four services that work together.
-
 #### Additional Requirements
 - An Asana board (or equivalent Kanban board tech) with full expansion on tasks needed to complete the project.
 
@@ -23,66 +29,41 @@ The approach to have the service –orientated architecture was to create an app
 
 ### Architecture
 
-#### Database Structure
-Here is a Entity relationship diagram (ERD). This is the final database structure chosen to build with the application.
-It is able to store all the information in the database, able to create, read, update and delete everything associated database.
-
-![alt text](https://github.com/kholeone/devops-core-fundamental-project-/blob/main/Documents/erd_ver_1.0.png)
-
 #### CI Pipeline
-The CI pipeine allows implementation efficiently, showing that coding devlopment has been doing in python, able to be pushed and pulled to the git version control system. Trello is keeping track of the current development which then cycles forward to the CI server Jenkins that updates the enviroment through automation.
-Testing was done through this along with the application being deployed on a virtual machine with gunicorn intergration acessing mySQL databases.
-
-![alt text](https://github.com/kholeone/devops-core-fundamental-project-/blob/main/Documents/Screenshot%202020-11-16%20081716.png "CI Pipeline")
-
+This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out.
+![alt text]("stage-view-jenkins-pipeline")
 ### Project Tracking 
-This is the Trello board used throughout the duration of the project. Utilising it to help track the development of the project. This has been 
-very helpful as it displays what needs to be done and what has been completed, focusing on the areas of the projects that need requires attention the most.
-![alt text](https://github.com/kholeone/devops-core-fundamental-project-/blob/main/Documents/Screenshot%202020-11-15%20025715.png)
-
-Here is a link to my Trello board, that was used to track the progress of the project:
-https://trello.com/b/9r3rbJG2/lucky-duck-app
-
+A Kanban board was produced using Trello. This helped to manage the project by displaying the tasks that has been completed, in completed along with risks that has happened during the duration of the project. This gave a good idea of what areas of focus needs to be paid attention too along with giving updates on the current situation of the project.
+![alt text]() “kanban board”
 
 ### Risk Assessment
-The Risk Assessment was done to prepare, anticipate and deliver the reliefs of potential threats that can occur with the project.
-![alt text](https://github.com/kholeone/devops-core-fundamental-project-/blob/main/Documents/risk_assessment_snippet.png "risk assessment")
-Risk Assessment link: 
-https://drive.google.com/file/d/18dbeBYOijlBn2jIVVrRpjJASh52iZTPC/view?usp=sharing
+The potential of risks and threats in projects is not uncommon, so a risk assessment was done to give awareness of any possible outcomes and to be able to counter the problems that will ensure the success of a project. It is beneficial to know how to react to a problem as it can make a difference to how it is effectively handled which can save a development from an unforeseen consequence by being prepared and having the consideration of safe practices to negate any potential risk.
+(image of risk assessment)
 
 ### Testing 
-Testing has been done with Pytest, used in Python in a form of Unit Testing.
-This is to analyse and detect differences in existing and required conditions, and to evaluate the features of the application.
-
-![alt text](https://github.com/kholeone/devops-core-fundamental-project-/blob/main/Documents/Screenshot%202020-11-15%20223302.png "unit testing")
-
-81% was achieved in the Unit Testing. There are areas of improvement in the testing which lies in the '**applications.routes.py**', but as it stands
-it was not huge of an issue to have the application fail as it is still functional. Integration testing was also produced later in the testing phase which test different parts of the application work together. This was used mainly to test the CRUD aspects of the application.
-
+Testing was done with all of the four services. This was done using Pytest to attain a high percentage of coverage to ensure each service runs correctly with minimal problems/bugs. This was first done after the application on its own was completed, doing the tests in the terminal and confirming the results in there before going on to the next stage of the project. However, this was also done again for the Jenkins Pipeline as it was the early steps used before the deployment of the project. Ensuring that if it was to fail the deployment will be a failure, thus no risk of putting out a defective application that may cause harm in the long run.
+![alt text]("pytest --cov ")
 
 ### Front-End Design
 The front end design is very minimal, as it was not the core focus of the project there was a little consideration of the design. It has a neat layout which provides easy navigation but very light weight that matches the functions of the application.
 
 ![alt text]("snkrs-app front end")
+This is the index/home page of the application which have the title of the application and a link to generate the object which is a shoe model.
 ![alt text]("snkrs-app front end")
+Since it is random it compiles with a numerous number of variations, so if the conditions are not met; being that it is an actual shoe model that does not exist the message displayed from the 4th service that using the pre-defined rules.
 ![alt text]("snkrs-app front end")
+This is another variation of what the user can see, if it is a real shoe model it will display information to the user which can be in a form of the real retail price of the shoe or information/history of what the shoe is.
 
 ### Known Issues
-- An issue with updating the details of a listing
-- When updating text, additional string characters are present
-- Adding a detail within a listing that has already been done will cause an error
+-	The application seems to have a timeout at times when refreshed repeatably 
 
 ### Future Improvements
-There are many improvements that can be made to the application
-assuming having less time constraints and broadening of knowledge.
-Improvements such as:
+With the time duration of this project, only so much can get dome and of course this always amounts to areas of improvements that can be done. Although I am satisfied with what has been achieved during the time period this project was developed on, with less/no constraints I would have had future improvements such as: 
 
-- Having a login for sellers that want to create a listing.
-- Allow pictures to be uploaded to display the product.
-- Have a messaging system where users can publically or privately message each   other in regards of the listing.
-- Have a stylistic front-end design to make the application more appealing
-- Produce an application that was close to the original concept 
-- To have an application with minimal bugs
+-	To have a more interesting front end design
+-	Make full utilisation of the technologies that was involved in this project
+
+
 
 ### Authors
 Kholeo Taylor 👻
