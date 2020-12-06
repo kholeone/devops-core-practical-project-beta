@@ -34,7 +34,7 @@ This is the Jenkins pipeline process that ensures the project is functional and 
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/deployment.png "stage-view-jenkins-pipeline")
 ### Project Tracking 
 A Kanban board was produced using Trello. This helped to manage the project by displaying the tasks that has been completed, in completed along with risks that has happened during the duration of the project. This gave a good idea of what areas of focus needs to be paid attention too along with giving updates on the current situation of the project.
-![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/kanban%20board.png “Kanban Board”)
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/kanban-board.png “kanban board”)
 
 ### Risk Assessment
 The potential of risks and threats in projects is not uncommon, so a risk assessment was done to give awareness of any possible outcomes and to be able to counter the problems that will ensure the success of a project. It is beneficial to know how to react to a problem as it can make a difference to how it is effectively handled which can save a development from an unforeseen consequence by being prepared and having the consideration of safe practices to negate any potential risk.
