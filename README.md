@@ -30,7 +30,7 @@ The approach to have the service –orientated architecture was to create an app
 ### Architecture
 
 #### CI Pipeline
-This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out.
+This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out. There were multiple stages, however it seemed to be best to minise it as much as possible since it allowed for full deployment. This meant that implementations that were used had to be taken out as it potentially broked the process of the stages. With the time contraints the option was to maxmimise the most of what can be done and a simple three stage build was the conclusion.
 ![alt text]("stage-view-jenkins-pipeline")
 ### Project Tracking 
 A Kanban board was produced using Trello. This helped to manage the project by displaying the tasks that has been completed, in completed along with risks that has happened during the duration of the project. This gave a good idea of what areas of focus needs to be paid attention too along with giving updates on the current situation of the project.
@@ -62,6 +62,8 @@ With the time duration of this project, only so much can get dome and of course 
 
 -	To have a more interesting front end design
 -	Make full utilisation of the technologies that was involved in this project
+- Perhaps more stages to the Jenkins Pipeline that can make it more effective
+- 
 
 
 
