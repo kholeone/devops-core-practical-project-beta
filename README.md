@@ -30,15 +30,22 @@ The approach to have the service –orientated architecture was to create an app
 ### Architecture
 
 #### CI Pipeline
+
+##### Version Control System
+There was full utilisation of the feature-branch model throughout the duration of the project. This help to separate the aspects of the development in smaller increments and have a clear analysis of what has been added. All the feature-branches were used during the first stages of the development doing something as simple as adding code, tests, configuring docker files etc. I treated this branch model as if an individual was giving only one area of the project in their full control while not interfering the process of another which will reduce any problems from the project failing due to errors and no track of meaningful implementations.
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/version-control-branches.png "branch models")
+
+#### CI Server Jenkins Pipeline
 This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out. There were multiple stages, however it seemed to be best to minise it as much as possible since it allowed for full deployment. This meant that implementations that were used had to be taken out as it potentially broked the process of the stages. With the time contraints the option was to maxmimise the most of what can be done and a simple three stage build was the conclusion.
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/deployment.png "stage-view-jenkins-pipeline")
+
 ### Project Tracking 
 A Kanban board was produced using Trello. This helped to manage the project by displaying the tasks that has been completed, in completed along with risks that has happened during the duration of the project. This gave a good idea of what areas of focus needs to be paid attention too along with giving updates on the current situation of the project.
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/kanban-board.png “kanban board”)
 
 ### Risk Assessment
 The potential of risks and threats in projects is not uncommon, so a risk assessment was done to give awareness of any possible outcomes and to be able to counter the problems that will ensure the success of a project. It is beneficial to know how to react to a problem as it can make a difference to how it is effectively handled which can save a development from an unforeseen consequence by being prepared and having the consideration of safe practices to negate any potential risk.
-![alt text]( "Risk Assessment")
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/risk-assessment.png "Risk Assessment")
 
 ### Testing 
 Testing was done with all of the four services. This was done using Pytest to attain a high percentage of coverage to ensure each service runs correctly with minimal problems/bugs. This was first done after the application on its own was completed, doing the tests in the terminal and confirming the results in there before going on to the next stage of the project. However, this was also done again for the Jenkins Pipeline as it was the early steps used before the deployment of the project. Ensuring that if it was to fail the deployment will be a failure, thus no risk of putting out a defective application that may cause harm in the long run.
