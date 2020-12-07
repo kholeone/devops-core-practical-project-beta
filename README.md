@@ -34,7 +34,8 @@ The approach to have the service –orientated architecture was to create an app
 
 #### CI Pipeline
 There has been a few iterations of the pipeline as the use of more tools become avaliable when diving further into the project. Initialy from just reading the project specifications a CI Pipeline was developed to have an idea of what could be expected from just analysing the scope what needs to be done and implemented in order to fufill the needs for the project.
-(version 1)
+#### 1st Version
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/Screenshot%202020-12-07%20130939.png)
 
 
 ##### Version Control System
