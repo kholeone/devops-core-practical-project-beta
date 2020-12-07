@@ -39,9 +39,14 @@ There was full utilisation of the feature-branch model throughout the duration o
 This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out. There were multiple stages, however it seemed to be best to minise it as much as possible since it allowed for full deployment. This meant that implementations that were used had to be taken out as it potentially broked the process of the stages. With the time contraints the option was to maxmimise the most of what can be done and a simple three stage build was the conclusion.
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/deployment.png "stage-view-jenkins-pipeline")
 
+##### Docker
+Docker was used for containerisation and an orchestration tool in this project. Docker-Compose built all four services and tagged them. It makes use of a Dockerfile that builds a Docker Image which contains all the dependancies the application requires. The services then start which has been defined and can be accessed to users. The tool used for this was Docker-Hub as it stored the repositories of the services and can build and update upon them when rolling an update.
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/docker-hub.png)
+
+
 ### Project Tracking 
 A Kanban board was produced using Trello. This helped to manage the project by displaying the tasks that has been completed, in completed along with risks that has happened during the duration of the project. This gave a good idea of what areas of focus needs to be paid attention too along with giving updates on the current situation of the project.
-![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/kanban-board.png “kanban board”)
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/kanban-board.png)
 
 ### Risk Assessment
 The potential of risks and threats in projects is not uncommon, so a risk assessment was done to give awareness of any possible outcomes and to be able to counter the problems that will ensure the success of a project. It is beneficial to know how to react to a problem as it can make a difference to how it is effectively handled which can save a development from an unforeseen consequence by being prepared and having the consideration of safe practices to negate any potential risk.
