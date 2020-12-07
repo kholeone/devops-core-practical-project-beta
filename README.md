@@ -36,6 +36,9 @@ The approach to have the service –orientated architecture was to create an app
 There has been a few iterations of the pipeline as the use of more tools become avaliable when diving further into the project. Initialy from just reading the project specifications a CI Pipeline was developed to have an idea of what could be expected from just analysing the scope what needs to be done and implemented in order to fufill the needs for the project.
 #### 1st Version
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/Screenshot%202020-12-07%20130939.png)
+#### 2nd version
+The general idea with the CI Pipeline is that Python pushes the source code using Git, creating a repostitory on Git-Hub. This is being tracked throughout the project by the Kandan Board to ensure the implmentations done for the project has been done and can focus on areas that need to be completed. When this is pushed to Jenkins, it is also configuered with a webhook that allow Jenkins build jobs to be to automatically build after a commit has been pushed to the Version Control Provider. Now at the CI Server using the Jenkins Pipeline it will then go through multiple stages of the application, one being testing which is handled by Pytest and then building and pushing the images using docker-compose, storing on Docker-Hub. These same images are then pulled by docker-swarm that deploys a stack from the virtual machine, using nginx as a load balancer and a reverse proxy.
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/Screenshot%202020-12-07%20153321.png)
 
 
 ##### Version Control System
