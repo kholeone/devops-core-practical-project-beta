@@ -59,6 +59,12 @@ The potential of risks and threats in projects is not uncommon, so a risk assess
 Testing was done with all of the four services. This was done using Pytest to attain a high percentage of coverage to ensure each service runs correctly with minimal problems/bugs. This was first done after the application on its own was completed, doing the tests in the terminal and confirming the results in there before going on to the next stage of the project. However, this was also done again for the Jenkins Pipeline as it was the early steps used before the deployment of the project. Ensuring that if it was to fail the deployment will be a failure, thus no risk of putting out a defective application that may cause harm in the long run.
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/testing.png "pytest --cov")
 
+### Build
+During the build stage, docker login will begin this stage following a stop and rmi- all for any previous containers, networks, volumes and images. It will then do a docker-compose build and push it to a repository that is used on Docker-Hub.
+
+### Deploy
+This is the final stage will ssh the manager and start to pull all four services individually along with an nginx. It will then clone down the projects repository and deploy a new stack using the docker stack deploy. 
+
 ### Front-End Design
 The front end design is very minimal, as it was not the core focus of the project there was a little consideration of the design. It has a neat layout which provides easy navigation but very light weight that matches the functions of the application.
 
