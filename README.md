@@ -29,7 +29,12 @@ The approach to have the service –orientated architecture was to create an app
 
 ### Architecture
 
+#### Diagrams
+
 #### CI Pipeline
+There has been a few iterations of the pipeline as the use of more tools become avaliable when diving further into the project. Initialy from just reading the project specifications a CI Pipeline was developed to have an idea of what could be expected from just analysing the scope what needs to be done and implemented in order to fufill the needs for the project.
+(version 1)
+
 
 ##### Version Control System
 There was full utilisation of the feature-branch model throughout the duration of the project. This help to separate the aspects of the development in smaller increments and have a clear analysis of what has been added. All the feature-branches were used during the first stages of the development doing something as simple as adding code, tests, configuring docker files etc. I treated this branch model as if an individual was giving only one area of the project in their full control while not interfering the process of another which will reduce any problems from the project failing due to errors and no track of meaningful implementations.
