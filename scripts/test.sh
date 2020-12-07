@@ -1,11 +1,9 @@
 #! /bin/bash
-
-
-cd ./service-one
-python3 -m pytest --cov application
-cd ..
+sudo apt update
+sudo apt install python3 python3-pip 
 
 cd ./service-two
+pip3 install -r requirements.txt
 python3 -m pytest --cov application
 cd ..
 
