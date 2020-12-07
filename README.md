@@ -38,6 +38,7 @@ There was full utilisation of the feature-branch model throughout the duration o
 #### CI Server Jenkins Pipeline
 This is the Jenkins pipeline process that ensures the project is functional and ready for deployment. The testing stage will run a test on each service to ensure everything works as intended. The second stage starts to build the application by using docker to have multiple containers that can run a single service, along with pushing it which will lead to the next stage. Deployment is the final stage which pulls the images and retrieves the project to be rolled out. There were multiple stages, however it seemed to be best to minise it as much as possible since it allowed for full deployment. This meant that implementations that were used had to be taken out as it potentially broked the process of the stages. With the time contraints the option was to maxmimise the most of what can be done and a simple three stage build was the conclusion.
 ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/development/documents/deployment.png "stage-view-jenkins-pipeline")
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/Screenshot%202020-12-07%20115036.png)
 
 #### Cloud server: GCP virtual machines
 Google Cloud Platform was used for the virtual machines of this project, I set it up by having the vm-demo-2 as my development machine that I would SSH into from my local machine as it was easier to devlop using Visual Studio Code and more efficient. This machine was the foundation to the project which created the manager and worker virtual machines which utilise the tool docker swarm which was a requirement for this project. These machines will also have access to ports such as 5000 for the flask application and 8080 for jenkins as it was needed for the project. ![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/GCP%20virtual%20machines.png)
@@ -61,6 +62,8 @@ Testing was done with all of the four services. This was done using Pytest to at
 
 ### Build
 During the build stage, docker login will begin this stage following a stop and rmi- all for any previous containers, networks, volumes and images. It will then do a docker-compose build and push it to a repository that is used on Docker-Hub.
+![alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/jenkins-pipeline%20build.png)
+[alt text](https://github.com/kholeone/devops-core-practical-project-beta/blob/main/documents/jenkins-pipeline%20build2.png)
 
 ### Deploy
 This is the final stage will ssh the manager and start to pull all four services individually along with an nginx. It will then clone down the projects repository and deploy a new stack using the docker stack deploy. 
